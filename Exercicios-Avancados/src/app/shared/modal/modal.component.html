@@ -1,0 +1,16 @@
+<ion-modal [isOpen]="isOpen" (ionModalDidDismiss)="closeModal()">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ title }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">Fechar</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ng-content></ng-content>
+    <ion-footer *ngIf="showConfirm">
+      <ion-button expand="block" color="success" (click)="confirm()">Confirmar</ion-button>
+    </ion-footer>
+  </ion-content>
+</ion-modal>

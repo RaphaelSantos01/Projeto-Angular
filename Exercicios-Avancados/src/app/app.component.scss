@@ -1,0 +1,9 @@
+ion-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  ion-router-outlet {
+    margin-top: 56px; /* Altura do cabeçalho */
+  }
